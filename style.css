@@ -73,6 +73,7 @@ text-align: center;
 flex: 1; /* Takes up the other half */
 width: 100%; /* Ensure it stretches */
 height: 500px; /* Adjust for visibility */
+padding-top: 20px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -95,7 +96,7 @@ align-items: center;
 
 .stock-input-container input {
 padding: 10px;
-width: 350px;
+width: 340px;
 font-size: 1rem;
 border: 2px solid #ffcc00;
 border-radius: 5px;
@@ -128,6 +129,11 @@ background-color: #0033cc;
 .tradingview-widget-container {
   max-width: 100%;
   height: 350px; /* Smaller chart for mobile */
+}
+
+/* for phone i need to reduce size of input and button */
+.stock-input-container input {
+  width: 200px;
 }
 }
 
