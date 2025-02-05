@@ -1,0 +1,36 @@
+<svg 
+    width="512" 
+    height="512" 
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <!-- Radial gradient from blue to light blue -->
+    <radialGradient id="grad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#//00c6ff"/>
+      <stop offset="100%" stop-color="#//0072ff"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Circle background using our gradient -->
+  <circle 
+    cx="256" 
+    cy="256" 
+    r="256" 
+    fill="url(#grad)" 
+  />
+
+  <!-- The "PJ" initials in the center -->
+  <text
+    x="50%" 
+    y="55%"
+    font-size="260"
+    font-family="Poppins, sans-serif" 
+    fill="#ffffff"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-weight="700"
+  >
+    PJ
+  </text>
+</svg>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peeyush Jha - Personal Website</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Google Fonts (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" 
+    rel="stylesheet"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ========= NAVBAR ========= -->
+<nav class="navbar">
+  <div class="nav-logo">Peeyush Jha</div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#resume">Résumé</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ========= HERO SECTION ========= -->
+<header id="hero" class="hero-section">
+  <div class="hero-content">
+    <h1>Peeyush Jha</h1>
+    <h2>B.S. Computer Science @ UC San Diego</h2>
+    <button onclick="smoothScroll('#about')">Learn More</button>
+  </div>
+</header>
+
+<!-- ========= ABOUT SECTION ========= -->
+<section id="about" class="section about-section">
+  <div class="section-container reveal">
+    <h2>About Me</h2>
+    <p>
+      I’m Peeyush, a passionate Computer Science student with experience 
+    in software engineering, machine learning, and teaching. I am highly interested in exploring the financial technology sector, particularly in quant trading.
+    </p>
+  </div>
+</section>
+
+<!-- ========= RESUME SECTION ========= -->
+<section id="resume" class="section resume-section">
+  <div class="section-container reveal">
+    <h2>Résumé</h2>
+    <h3>Education</h3>
+    <p>
+      University of California San Diego (UCSD), Aug 2022 – June 2025<br/>
+      B.S. Computer Science, Minor in Math | GPA: 3.98/4.0
+    </p>
+    <p><strong>Relevant Courses:</strong> Data Structures, OOP, Web Mining, ML, etc.</p>
+
+    <h3>Experience</h3>
+
+    <!-- 1) SOFTWARE ENGINEERING INTERN -->
+    <div class="experience-block">
+      <p><strong>Software Engineering Intern</strong> @ Addverb Technologies</p>
+      <p><em>June 2024 – Aug 2024 | New Delhi, India</em></p>
+      <ul>
+        <li>Redesigned C++ modules to improve real-time robotic data processing efficiency.</li>
+        <li>Developed RESTful APIs and integrated AWS CloudWatch for secure data transfer.</li>
+        <li>Implemented CI/CD pipelines with Jenkins and Docker to automate builds & deployments.</li>
+      </ul>
+    </div>
+
+    <!-- 2) AI/ML INTERN -->
+    <div class="experience-block">
+      <p><strong>AI/ML Intern</strong> @ Rasp Enterprises</p>
+      <p><em>June 2023 – Aug 2023 | Patna, India</em></p>
+      <ul>
+        <li>Leveraged Python (Pandas, NumPy, Matplotlib) and MySQL to handle datasets of 10M+ records.</li>
+        <li>Fine-tuned pre-trained transformer models and utilized NLP for unstructured text analysis.</li>
+        <li>Explored LLM fundamentals with PyTorch/TensorFlow for predictive analytics.</li>
+      </ul>
+    </div>
+
+    <!-- 3) TEACHING ASSISTANT -->
+    <div class="experience-block">
+      <p><strong>Teaching Assistant</strong> @ UC San Diego, CSE Dept.</p>
+      <p><em>Sept 2023 – Present | San Diego, CA</em></p>
+      <ul>
+        <li>Mentored 400+ students in Intro to Programming and Computer Architecture (Python/C).</li>
+        <li>Set up GitHub Classroom for version control, streamlined project submissions.</li>
+        <li>Worked with professors to refactor course content and introduce advanced concepts.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========= PROJECTS SECTION ========= -->
+<section id="projects" class="section projects-section">
+  <div class="section-container reveal">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <!-- 1) MINDFUL U -->
+      <div class="project-card">
+        <h3>Mindful U</h3>
+        <p>
+          Full-stack meditation app for guided focus, relaxation, and sleep. 
+          Developed with React, Firebase, Node.js, TypeScript.
+        </p>
+      </div>
+
+      <!-- 2) AI-POWERED TRADING BOT -->
+      <div class="project-card">
+        <h3>AI-Powered Trading Bot</h3>
+        <p>
+          Implemented LSTM and Transformer models for stock price forecasting 
+          and deployed via Docker on AWS, achieving a 10% improvement in predictive accuracy.
+        </p>
+      </div>
+
+      <!-- 3) REAL-TIME CHAT APP -->
+      <div class="project-card">
+        <h3>Real-time Chat App</h3>
+        <p>
+          Built a responsive chat application with vanilla JS (WebSockets) 
+          and Node.js. Supports channels, private messaging, and offline message queuing.
+        </p>
+      </div>
+
+      <!-- 4) MOVIE RECOMMENDER SYSTEM -->
+      <div class="project-card">
+        <h3>Movie Recommender System</h3>
+        <p>
+          Leveraged collaborative filtering and content-based ML algorithms in Python 
+          (Pandas, Scikit-learn) to recommend movies based on user ratings and preferences.
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ========= CONTACT SECTION ========= -->
+<section id="contact" class="section contact-section">
+  <div class="section-container reveal">
+    <h2>Contact</h2>
+    <p>Feel free to reach me at <strong>peeyush2504@gmail.com</strong> or <strong>858-319-5066</strong></p>
+    <p>
+      Or connect on 
+      <a href="https://linkedin.com/in/peeyush-jha" target="_blank">
+        LinkedIn
+      </a>.
+    </p>
+  </div>
+</section>
+
+<!-- ========= FOOTER ========= -->
+<footer class="footer">
+  © 2025 Peeyush Jha | 
+  <a href="https://linkedin.com/in/peeyush-jha" target="_blank">
+    LinkedIn
+  </a>
+</footer>
+
+<!-- Main JS -->
+<script src="script.js"></script>
+</body>
+</html>
