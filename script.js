@@ -5,43 +5,55 @@ function smoothScroll(targetId) {
   });
 }
 
+/// Ensure TradingView script is loaded before initializing
+function ensureTradingViewLoaded(callback) {
+  if (typeof TradingView !== "undefined") {
+    callback();
+  } else {
+    setTimeout(() => ensureTradingViewLoaded(callback), 500);
+  }
+}
+
 // Function to load the TradingView widget
 function loadTradingViewWidget(symbol = "NASDAQ:AAPL") {
-// Clear old chart
-document.getElementById("tradingview_chart").innerHTML = "";
+  ensureTradingViewLoaded(() => {
+    document.getElementById("tradingview_chart").innerHTML = "";
 
-// Create a new TradingView widget
-new TradingView.widget({
-  "container_id": "tradingview_chart",
-  "width": "100%",
-  "height": "100%",
-  "symbol": symbol.toUpperCase(),
-  "interval": "D",
-  "timezone": "Etc/UTC",
-  "theme": "dark",
-  "style": "1",
-  "locale": "en",
-  "enable_publishing": false,
-  "allow_symbol_change": true,
-  "hide_top_toolbar": true,
-  "save_image": false
-});
+    new TradingView.widget({
+      "container_id": "tradingview_chart",
+      "width": "100%",
+      "height": "100%",
+      "symbol": symbol.toUpperCase(),
+      "interval": "D",
+      "timezone": "Etc/UTC",
+      "theme": "dark",
+      "style": "1",
+      "locale": "en",
+      "enable_publishing": false,
+      "allow_symbol_change": true,
+      "hide_top_toolbar": true,
+      "save_image": false
+    });
+  });
 }
 
 // Function to update the stock chart when the user clicks the button
 function updateStockChart() {
-let stockSymbol = document.getElementById("stockSymbol").value.trim();
-if (stockSymbol === "") {
-  alert("Please enter a valid stock symbol (e.g., AAPL, TSLA, BTCUSD)");
-  return;
+  let stockSymbol = document.getElementById("stockSymbol").value.trim();
+  if (stockSymbol === "") {
+    alert("Please enter a valid stock symbol (e.g., AAPL, TSLA, BTCUSD)");
+    return;
+  }
+
+  loadTradingViewWidget(stockSymbol);
 }
 
-loadTradingViewWidget(stockSymbol);
-}
+// Attach function to global `window` object
+window.updateStockChart = updateStockChart;
 
 // Load default chart on page load
 document.addEventListener("DOMContentLoaded", function() {
-loadTradingViewWidget();
+  loadTradingViewWidget();
 });
 
 
