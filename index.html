@@ -33,12 +33,25 @@
 
 <!-- ========= HERO SECTION ========= -->
 <header id="hero" class="hero-section">
+  <!-- Left Side: Text and Input -->
   <div class="hero-content">
     <h1>Peeyush Jha</h1>
     <h2>B.S. Computer Science @ UC San Diego</h2>
-    <button onclick="smoothScroll('#about')">Learn More</button>
+
+    <!-- Stock Symbol Input -->
+    <div class="stock-input-container">
+      <input type="text" id="stockSymbol" placeholder="Enter Stock Symbol (e.g., AAPL, TSLA)">
+      <button onclick="updateStockChart()">Load Chart</button>
+    </div>
+  </div>
+
+  <!-- Right Side: TradingView Chart -->
+  <div class="tradingview-widget-container">
+    <div id="tradingview_chart"></div>
   </div>
 </header>
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js" defer></script>
+<script src="script.js" defer></script>
 
 <!-- ========= ABOUT SECTION ========= -->
 <section id="about" class="section about-section">
